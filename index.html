@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" ="" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +30,93 @@
     </style>
 </head>
 <body>
-    
+    <header>
+      <nav class="bg-gray-800">
+        <div class="container mx-auto px-4 py-2">
+          <div class="flex justify-between items-center">
+            <div class="text-white font-semibold text-lg">My Website</div>
+            <div class="hidden md:block md:space-x-4">
+              <a href="#" class="text-white hover:text-gray-300">Home</a>
+              <a href="#" class="text-white hover:text-gray-300">About</a>
+              <a href="#" class="text-white hover:text-gray-300">Services</a>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="hidden md:checked"/>
+            <label for="menu-toggle" class="md:hidden text-white cursor-pointer">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </label>
+            <div class="hidden md:flex md:space-x-4 lg:space-x-8">
+              <a href="#" class="text-white hover:text-gray-300">Portfolio</a>
+              <a href="#" class="text-white hover:text-gray-300">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="carousel mx-20">
+
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="./images/banner1.png" class="w-full" />
+        
+          <div class="absolute inset-0 flex flex-col justify-center items-center text-center">
+            <h2 class="text-[#FFF]">Exotic tastes at your doorstep</h2>
+            <p class="text-white">We supply highly quality organic products</p>
+            <button class="text-white rounded-lg py-4 px-6 bg-[#F85559]">Shop Now</button>
+          </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="./images/banner2.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle">❮</a> 
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide3" class="carousel-item relative w-full">
+          <img src="./images/banner3.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle">❮</a> 
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide4" class="carousel-item relative w-full">
+          <img src="./images/banner4.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide3" class="btn btn-circle">❮</a> 
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute max-w-6xl flex ">
+        <div>
+          <img src="./images/fruit1.png" alt="">
+          <p>Blackberry</p>
+        </div>
+        <div>
+          <img src="./images/fruit2.png" alt="">
+          <p>Orange</p>
+        </div>
+        <div>
+          <img src="./images/fruit3.png" alt="">
+          <p>Mango</p>
+        </div>
+        <div>
+          <img src="./images/fruit4.png" alt="">
+          <p>Strawberry</p>
+        </div>
+        <div>
+          <img src="./images/fruit5.png" alt="">
+          <p>Pomegranate</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
