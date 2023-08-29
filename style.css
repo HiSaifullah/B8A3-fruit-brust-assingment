@@ -4,3 +4,22 @@
     background-blend-mode: darken;
 
 }
+.dedicate-border{
+    border-bottom:1px solid black;
+    padding-bottom: 40px;
+    height: 1px;
+    width: 50%;
+}
+.dedicate-border-2{
+    border-bottom:1px solid black;
+    width: 60%;
+    display: flex;
+    float: right;
+
+}
+/* .footer-icon > i{
+    padding: 40px 40px 10px 40px;
+} */
+#menu-toggle:checked ~ ul{
+    left: 0;
+}
