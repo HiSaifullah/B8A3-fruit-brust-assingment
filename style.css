@@ -17,9 +17,6 @@
     float: right;
 
 }
-/* .footer-icon > i{
-    padding: 40px 40px 10px 40px;
-} */
 #menu-toggle:checked ~ ul{
     left: 0;
 }

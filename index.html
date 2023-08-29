@@ -32,7 +32,9 @@
          font-family: 'Lato', sans-serif;
         }
     </style>
+
 </head>
+
 <body>
     <header>
       <!-- navbar section -->
@@ -51,7 +53,7 @@
                 <i class="fa-solid fa-bars"></i>
               </label>
 
-            <ul class=" text-black md:float-left md:mr-10 md:flex md:leading-10 md:space-x-4 md:block text-lg md:text-white font-medium rounded fixed md:relative transition-all duration-300 md:transition-none text-center bg-[#F85559] items-center h-[100vh]  md:h-0 w-[100%] md:w-fit top-20 md:top-0 left-[-100%] md:left-0 transition-all duration-300 md:transition-none text-center">
+            <ul class=" text-black md:float-left md:mr-10 md:flex md:leading-10 md:space-x-4 md:block text-lg md:text-white font-medium rounded fixed md:relative transition-all duration-300 md:transition-none text-center bg-gray-300 items-center h-[20vh]  md:h-0 w-[60%] md:w-fit top-20 md:top-0 left-[-100%] md:left-0 transition-all duration-300 md:transition-none text-center hover:font-semibold">
               <li><a class="hover:text-pink-900" href="#">Home</a></li>
               <li><a class="hover:text-pink-900" href="#">About Us</a></li>
               <li><a class="hover:text-pink-900" href="#">Shop</a></li>
@@ -71,7 +73,7 @@
     </header>
     <main>
       <!-- slider section -->
-      <div class="carousel mt-20 md:mt-4">
+      <div class="carousel mt-20 md:mt">
 
         <div id="slide1" class="carousel-item relative w-full">
           <img src="./images/banner1.png" class="w-full" />
@@ -184,9 +186,9 @@
       </div>
       <!-- new card -->
       <div>
-      <div class="p-16 gap-6 md:mx-10 md:flex">
-        <div class="card w-80 mb-10 rounded-sm border border-neutral-300	">
-          <figure class="pt-10 px-10">
+      <div class="p-5 gap-4 md:mx-5 md:flex">
+        <div class="card w-[340px] h-[430px] mb-10 rounded-sm border border-neutral-300	">
+          <figure class="pt-5 px-10">
             <img src="./images/fruit6.png" alt="Shoes" class="rounded-xl" />
           </figure>
           <div class="card-body items-center text-center">
@@ -206,11 +208,41 @@
               <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
             </div>
             <div class="card-actions">
-              <button class="text-lg font-bold text-[#F85559]">Details</button>
+              <button id="openModalButton" class="text-lg font-bold text-[#F85559]">Details</button>
             </div>
           </div>
         </div>
-        <div class="card w-80 mb-10 rounded-sm border border-neutral-300	">
+        <!-- first card button -->
+        <div id="modal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+          <div class="bg-white p-8 rounded shadow-md w-[450px] h-[480px] text-center items-center">
+            <img src="./images/fruit6.png" class=" pl-[35%] pb-4" alt="">
+              <h2 class="text-4xl text-[#121212] font-extrabold pb-4">Apples</h2>
+              <p class="">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+              <div class="rating rating-lg h-10 w-40 rating-half p-6">
+                <input type="radio" name="rating-10" class="rating-hidden" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" checked />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+              </div>
+              <div class="">
+                <button id="closeModalButton" class="mt-4 rounded-lg border-2 text-[#F85559] border-[#F85559] font-bold py-2 px-4">
+                    Close
+                </button>
+                <button id="closeModalButton" class="ml-5 mt-4 rounded-lg border-2 text-white bg-[#F85559] font-bold py-[10px] px-[18px] hover:text-red-950">
+                  Buy Now
+                </button>
+              </div>
+          </div>
+      </div>
+      <!-- first card button end -->
+        <div class="card w-[340px] h-[430px] mb-10 rounded-sm border border-neutral-300	">
           <figure class="pt-10 px-10">
             <img src="./images/fruit7.png" alt="Shoes" class="rounded-xl" />
           </figure>
@@ -231,11 +263,41 @@
               <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
             </div>
             <div class="card-actions">
-              <button class="text-lg font-bold text-[#F85559]">Details</button>
+              <button id="openModalButton2"  class="text-lg font-bold text-[#F85559]">Details</button>
             </div>
-          </div>
         </div>
-        <div class="card w-80 mb-10 rounded-sm border border-neutral-300	">
+      </div>
+        <!-- second card button -->
+        <div id="modal2" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+          <div class="bg-white p-8 rounded shadow-md w-[450px] h-[480px] text-center items-center">
+            <img src="./images/fruit7.png" class=" pl-[30%] pb-4" alt="">
+              <h2 class="text-4xl text-[#121212] font-extrabold pb-4">Orange</h2>
+              <p class="">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+              <div class="rating rating-lg h-10 w-40 rating-half p-6">
+                <input type="radio" name="rating-10" class="rating-hidden" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" checked />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+              </div>
+              <div class="">
+                <button id="closeModalButton2" class="mt-4 rounded-lg border-2 text-[#F85559] border-[#F85559] font-bold py-2 px-4">
+                    Close
+                </button>
+                <button id="closeModalButton2" class="ml-5 mt-4 rounded-lg border-2 text-white bg-[#F85559] font-bold py-[10px] px-[18px] hover:text-red-950">
+                  Buy Now
+                </button>
+              </div>
+          </div>
+      </div>
+      <!-- second card button end -->
+        <div class="card w-[340px] h-[430px] mb-10 rounded-sm border border-neutral-300	">
           <figure class="pt-10 px-10">
             <img src="./images/fruit8.png" alt="Shoes" class="rounded-xl" />
           </figure>
@@ -256,11 +318,41 @@
               <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
             </div>
             <div class="card-actions">
-              <button class="text-lg font-bold text-[#F85559]">Details</button>
+              <button id="openModalButton3"  class="text-lg font-bold text-[#F85559]">Details</button>
             </div>
+        </div>
+      </div>
+        <!-- third card button -->
+        <div id="modal3" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+          <div class="bg-white p-8 rounded shadow-md w-[450px] h-[480px] text-center items-center">
+           <img src="./images/fruit8.png" class=" pl-[30%] pb-4" alt="">
+            <h2 class="text-4xl text-[#121212] font-extrabold pb-4">Red Dragon</h2>
+            <p class="">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+          <div class="rating rating-lg h-10 w-40 rating-half p-6">
+            <input type="radio" name="rating-10" class="rating-hidden" />
+            <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+            <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+            <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" checked />
+            <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+            <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+            <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+            <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+            <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+            <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+            <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+          </div>
+          <div class="">
+            <button id="closeModalButton3" class="mt-4 rounded-lg border-2 text-[#F85559] border-[#F85559] font-bold py-2 px-4">
+              Close
+            </button>
+            <button id="closeModalButton3" class="ml-5 mt-4 rounded-lg border-2 text-white bg-[#F85559] font-bold py-[10px] px-[18px] hover:text-red-950">
+              Buy Now
+            </button>
           </div>
         </div>
-        <div class="card w-80 mb-10 rounded-sm border border-neutral-300	">
+      </div>
+        <!-- third card button end -->
+        <div class="card w-[340px] h-[430px] mb-10 rounded-sm border border-neutral-300	">
           <figure class="pt-10 px-10">
             <img src="./images/fruit9.png" alt="Shoes" class="rounded-xl" />
           </figure>
@@ -281,15 +373,46 @@
               <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
             </div>
             <div class="card-actions">
-              <button class="text-lg font-bold text-[#F85559]">Details</button>
+              <button id="openModalButton4" class="text-lg font-bold text-[#F85559]">Details</button>
             </div>
           </div>
         </div>
-      </div>
-      <div class="-mt-8 text-center">
+         <!-- fourth card button -->
+                <div id="modal4" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                  <div class="bg-white p-8 rounded shadow-md w-[450px] h-[480px] text-center items-center">
+                    <img src="./images/fruit9.png" class=" pl-[30%] pb-4" alt="">
+                        <h2 class="text-4xl text-[#121212] font-extrabold pb-4">Banana</h2>
+                         <p class="">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                      <div class="rating rating-lg h-10 w-40 rating-half p-6">
+                          <input type="radio" name="rating-10" class="rating-hidden" />
+                          <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                          <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                          <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" checked />
+                          <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                          <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                          <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                          <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                          <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                          <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-1" />
+                          <input type="radio" name="rating-10" class="bg-[#F85559] mask mask-star-2 mask-half-2" />
+                        </div>
+                          <div class="">
+                            <button id="closeModalButton4" class="mt-4 rounded-lg border-2 text-[#F85559] border-[#F85559] font-bold py-2 px-4">
+                               Close
+                            </button>
+                            <button id="closeModalButton4" class="ml-5 mt-4 rounded-lg border-2 text-white bg-[#F85559] font-bold py-[10px] px-[18px] hover:text-red-950">
+                                  Buy Now
+                            </button>
+                          </div>
+                        </div>
+                    </div>
+      <!-- fourth card button end -->
+    </div>
+
+    <div class="-mt-8 flex justify-center text-center">
       <button class="rounded-lg  bg-[#F85559] text-white py-4 px-8 ">Shop All</button>
       </div>
-    </div>
+
     <!-- fruits experts -->
     <div class="fruits-experts rounded-lg mt-10 mx-4 md:mt-40 md:mx-5">
       <div>
@@ -456,5 +579,60 @@
         <i class="fa-brands fa-apple text-white"></i>
       </div>
     </footer>
+  </div>
 </body>
+    <!-- extra javascript -->
+    <script>
+  //  first js
+      const openModalButton = document.getElementById('openModalButton');
+           const closeModalButton = document.getElementById('closeModalButton');
+           const modal = document.getElementById('modal');
+    
+           openModalButton.addEventListener('click', () => {
+               modal.classList.remove('hidden');
+           });
+    
+           closeModalButton.addEventListener('click', () => {
+               modal.classList.add('hidden');
+           });
+    
+   //  second js
+      const openModalButton2 = document.getElementById('openModalButton2');
+           const closeModalButton2 = document.getElementById('closeModalButton2');
+           const modal2 = document.getElementById('modal2');
+    
+           openModalButton2.addEventListener('click', () => {
+               modal2.classList.remove('hidden');
+           });
+    
+           closeModalButton2.addEventListener('click', () => {
+               modal2.classList.add('hidden');
+           });
+      
+    // third js
+      const openModalButton3 = document.getElementById('openModalButton3');
+           const closeModalButton3 = document.getElementById('closeModalButton3');
+           const modal3 = document.getElementById('modal3');
+    
+           openModalButton3.addEventListener('click', () => {
+               modal3.classList.remove('hidden');
+           });
+    
+           closeModalButton3.addEventListener('click', () => {
+               modal3.classList.add('hidden');
+           });
+
+    //  fourth js
+      const openModalButton4 = document.getElementById('openModalButton4');
+           const closeModalButton4 = document.getElementById('closeModalButton4');
+           const modal4 = document.getElementById('modal4');
+    
+           openModalButton4.addEventListener('click', () => {
+               modal4.classList.remove('hidden');
+           });
+    
+           closeModalButton4.addEventListener('click', () => {
+               modal4.classList.add('hidden');
+           });
+    </script>
 </html>
